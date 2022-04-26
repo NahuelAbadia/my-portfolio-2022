@@ -60,7 +60,7 @@ const ContenedorSobreMi = () => {
         <Stack>
           <MotionButton
             as="a"
-            href="https://drive.google.com/file/d/1MPTGfKFhY-ke6Z5E9vbIWZnd6cKyi7vV/view?usp=sharing"
+            href="https://drive.google.com/file/d/1XQS7htNlO5iisD4knxW-L7LlA7o5X6EM/view?usp=sharing"
             target="_blank"
             color="white"
             variant="outline"
