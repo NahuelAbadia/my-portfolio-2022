@@ -28,7 +28,7 @@ const Technologies = () => {
             }
           }
         >
-          {skills.map((skill) => {
+          {skills.map(skill => {
             return <GridItem
               key={skill.id}
               h="100%"
