@@ -60,6 +60,7 @@ const Navbar = () => {
                     transition: "0.2s",
                   }}
                   style={{ textDecoration: 'none', transition: "0.2s" }}
+                  onClick={() => setShowMobileMenu(!showMobileMenu)}
                 >
                   {`<My Portfolio />`}
                 </MotionText>
@@ -72,72 +73,72 @@ const Navbar = () => {
 
             <Menu open={showMobileMenu}>
               <MenuItem>
-                <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                  <Link
-                    to="sobre-mi"
-                    spy={true}
-                    offset={-80}
-                    duration={700}
-                  >
+                <Link
+                  to="sobre-mi"
+                  spy={true}
+                  offset={-80}
+                  duration={700}
+                >
+                  <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                     <MotionText
                       _hover={{ textColor: "violeta.100", fontSize: { base: "2.1rem", sm: "2.5rem", md: "2.9rem", lg: "1.43rem" }, transition: "0.2s" }}
                       style={{ textDecoration: 'none', transition: "0.2s", }}
                     >
                       Sobre mi
                     </MotionText>
-                  </Link>
-                </MenuItemLink>
+                  </MenuItemLink>
+                </Link>
               </MenuItem>
               <MenuItem>
-                <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                  <Link
-                    to="skills"
-                    spy={true}
-                    offset={-80}
-                    duration={700}
-                  >
+                <Link
+                  to="skills"
+                  spy={true}
+                  offset={-80}
+                  duration={700}
+                >
+                  <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                     <MotionText
                       _hover={{ textColor: "violeta.100", fontSize: { base: "2.1rem", sm: "2.5rem", md: "2.9rem", lg: "1.43rem" }, transition: "0.2s" }}
                       style={{ textDecoration: 'none', transition: "0.2s" }}
                     >
                       Skills
                     </MotionText>
-                  </Link>
-                </MenuItemLink>
+                  </MenuItemLink>
+                </Link>
               </MenuItem>
               <MenuItem>
-                <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                  <Link
-                    to="proyectos"
-                    spy={true}
-                    offset={-80}
-                    duration={700}
-                  >
+                <Link
+                  to="proyectos"
+                  spy={true}
+                  offset={-80}
+                  duration={700}
+                >
+                  <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                     <MotionText
                       _hover={{ textColor: "violeta.100", fontSize: { base: "2.1rem", sm: "2.5rem", md: "2.9rem", lg: "1.43rem" }, transition: "0.2s" }}
                       style={{ textDecoration: 'none', transition: "0.2s" }}
                     >
                       Proyectos
                     </MotionText>
-                  </Link>
-                </MenuItemLink>
+                  </MenuItemLink>
+                </Link>
               </MenuItem>
               <MenuItem>
-                <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                  <Link
-                    to="contacto"
-                    spy={true}
-                    offset={-110}
-                    duration={700}
-                  >
+                <Link
+                  to="contacto"
+                  spy={true}
+                  offset={-110}
+                  duration={700}
+                >
+                  <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
                     <MotionText
                       _hover={{ textColor: "violeta.100", fontSize: { base: "2.1rem", sm: "2.5rem", md: "2.9rem", lg: "1.43rem" }, transition: "0.2s" }}
                       style={{ textDecoration: 'none', transition: "0.2s" }}
                     >
                       Contacto
                     </MotionText>
-                  </Link>
-                </MenuItemLink>
+                  </MenuItemLink>
+                </Link>
               </MenuItem>
             </Menu>
           </IconContext.Provider>

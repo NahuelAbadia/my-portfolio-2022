@@ -57,11 +57,12 @@ export const Menu = styled.ul`
 
   @media screen and (max-width: 767px) {
     background-color: #08080B;
+    padding-bottom: 100px;
     position: absolute;
     top: 100px;
     left: ${({ open }) => (open ? "0" : "-100%")}; //Import
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
@@ -70,11 +71,12 @@ export const Menu = styled.ul`
 
   @media screen and (max-width: 480px) {
     background-color: #08080B;
+    padding-bottom: 150px;
     position: absolute;
     top: 100px;
     left: ${({ open }) => (open ? "0" : "-100%")}; //Import
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
@@ -130,9 +132,6 @@ export const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 991px) {
-    // position: fixed;
-    // top: 40px;
-    // right: 10px;
     display: flex;
     align-items: center;
     cursor: pointer;
