@@ -7,7 +7,7 @@
   border-radius: 18px;
   background: white;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-  font-family: roboto;
+  font-family: Roboto, sans-serif;
   text-align: center;
   transition: 0.5s ease;
   cursor: pointer;
@@ -30,6 +30,7 @@
 .card-text h2 {
   margin-top:0px;
   font-size:28px;
+  font-weight: 400;
 }
 .card-text .date {
   font-size:17px;

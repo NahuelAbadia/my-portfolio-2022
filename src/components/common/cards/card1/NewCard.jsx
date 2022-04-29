@@ -2,7 +2,7 @@ import React from 'react'
 import Button2 from '../../buttons/button2/Button2'
 import "./NewCard.css"
 
-const NewCard = ({ nombre, desc, tecnologia, repo, pagina, img,  }) => {
+const NewCard = ({ nombre, desc, tecnologia, repo, pagina, img, }) => {
   return (
       <div className="card">
         <div className="card-image">
@@ -14,7 +14,7 @@ const NewCard = ({ nombre, desc, tecnologia, repo, pagina, img,  }) => {
           <p className="desc">{desc}</p>
         </div>
         <div className="card-buttons">
-          <Button2 title="Ver repo" color="purple" link={repo}/>
+          <Button2 title="Ver repo" color="purple" link={repo} />
           <Button2 title="Ver página" color="purple" link={pagina} />
         </div>
       </div>
