@@ -60,7 +60,6 @@ const Navbar = () => {
                     transition: "0.2s",
                   }}
                   style={{ textDecoration: 'none', transition: "0.2s" }}
-                  onClick={() => setShowMobileMenu(!showMobileMenu)}
                 >
                   {`<My Portfolio />`}
                 </MotionText>
