@@ -1,14 +1,15 @@
 import React from 'react'
-import { Box, Button, Grid, Image, Stack, Text } from '@chakra-ui/react'
+import { Box, Button, Image, Stack, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
 const CardProyectos = ({ nombre, tecnologia, desc, img, pagina, repo }) => {
 
   const MotionButton = motion(Button)
+  const MotionImage = motion(Image)
+  const MotionStack = motion(Stack)
 
   return (
     <Box>
-      <Grid templateColumns='repeat(1, 1fr)' h="100%">
         <Stack
           h="100%"
           py={6}
@@ -21,14 +22,22 @@ const CardProyectos = ({ nombre, tecnologia, desc, img, pagina, repo }) => {
           m={{ base: "auto" }}
           w={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
         >
-          <Stack h={{ base: "35%", sm: "40%", md: "40%", lg: "35%" }} mt={6}  >
-            <Image
+          <MotionStack
+            as="a"
+            href={pagina}
+            target="_blank"
+            mt={6}
+            h={{ base: "35%", sm: "40%", md: "40%", lg: "35%" }}
+          >
+            <MotionImage
               src={img}
               w="500px"
               h="100%"
+              cursor="pointer"
               objectFit={"contain"}
+              whileHover={{ scale: 1.11 }}
             />
-          </Stack>
+          </MotionStack>
 
           <Stack
             h="25%"
@@ -95,7 +104,6 @@ const CardProyectos = ({ nombre, tecnologia, desc, img, pagina, repo }) => {
             </Stack>
           </Stack>
         </Stack>
-      </Grid>
     </Box>
   )
 }

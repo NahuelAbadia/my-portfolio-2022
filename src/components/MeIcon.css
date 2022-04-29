@@ -1,0 +1,130 @@
+.container{
+  display:flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.face{
+  position: absolute;
+  top: 215px;
+  right: 195px;
+  width: 500px;
+  height: 450px;
+  text-align: center;
+}
+.eyes{
+  position: absolute;
+  top: 392px;
+  right: 379px;
+  width: 200px;
+  text-align: center;
+}
+.eye1{
+  width: 47px;
+  height: 27px;
+  background: #dde0e9;
+  display: inline-block;
+  margin: 20px;
+  border-top-left-radius: 150%;
+  border-top-right-radius: 120%;
+  border-bottom-left-radius: 120%;
+  border-bottom-right-radius: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.eye2{
+  width: 47px;
+  height: 27px;
+  background: #dde0e9;
+  display: inline-block;
+  margin: 20px;
+  border-top-left-radius: 120%;
+  border-top-right-radius: 150%;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 120%;
+  position: relative;
+  overflow: hidden;
+}
+.ball{
+  width: 23px;
+  height: 23px;
+  background: #000;
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  border: 4.5px solid #333;
+}
+
+@media (max-width: 1240px){
+  .face{
+    position: absolute;
+    top: 215px;
+    right: 0px;
+    width: 450px;
+    height: 450px;
+    text-align: center;
+  }
+  .eyes{
+    position: absolute;
+    top: 392px;
+    right: 135px;
+    width: 200px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 992px){
+  .face{
+    position: absolute;
+    top: 300px;
+    right: 15px;
+    width: 325px;
+    height: 350px;
+    text-align: center;
+  }
+  .eyes{
+    position: absolute;
+    top: 433px;
+    right: 79px;
+    width: 200px;
+    text-align: center;
+  }
+  .eye1{
+    width: 37px;
+    height: 17px;
+    background: #dde0e9;
+    display: inline-block;
+    margin: 14px;
+    border-top-left-radius: 150%;
+    border-top-right-radius: 120%;
+    border-bottom-left-radius: 120%;
+    border-bottom-right-radius: 50%;
+    position: relative;
+    overflow: hidden;
+  }
+  .eye2{
+    width: 37px;
+    height: 17px;
+    background: #dde0e9;
+    display: inline-block;
+    margin: 14px;
+    border-top-left-radius: 120%;
+    border-top-right-radius: 150%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 120%;
+    position: relative;
+    overflow: hidden;
+  }
+  .ball{
+    width: 21px;
+    height: 21px;
+    background: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    border: 4.5px solid #333;
+  }
+} 

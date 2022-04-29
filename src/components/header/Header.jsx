@@ -1,8 +1,8 @@
 import React from 'react'
+import Ojos from '../MeIcon';
 import Typewriter from 'typewriter-effect'
 import GraphemeSplitter from "grapheme-splitter";
-import nahue from '../../assets/nahu2022.jpeg'
-import { Box, Container, Image, Stack, Text } from '@chakra-ui/react'
+import { Box, Container, Stack, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
 const Home = () => {
@@ -15,12 +15,12 @@ const Home = () => {
   };
 
   return (
-    <Box bgColor="negro.900">
+    <Box bgColor="negro.900" id="home">
       <Container maxW="container.xl">
         <Stack
           align="center"
           w="100%"
-          h="80vh"
+          h="100vh"
           justifyContent={"space-between"}
           direction={"row"}
           spacing={0}
@@ -38,16 +38,6 @@ const Home = () => {
             <MotionText
               fontSize={{ base: "28px", sm: "33px", md: "28px", lg: "38px" }}
               pl={{ md: 4 }}
-              drag
-              dragConstraints={{
-                top: -2,
-                left: -2,
-                right: 2,
-                bottom: 2,
-              }}
-              dragElastic={0.1}
-              dragMomentum={false}
-              dragTransition={{ bounceStiffness: 300, bounceDamping: 10 }}
             >
               Hola, me llamo
             </MotionText>
@@ -75,9 +65,11 @@ const Home = () => {
                   stringSplitter
                 }}
                   onInit={(typewriter) => {
-                    typewriter.typeString('<span style="text-shadow:2px 2px 3px purple">Web Developer</span> 💻').pauseFor(1000).deleteAll()
-                      .typeString('<span style="text-shadow:2px 2px 3px purple">Frontend Developer</span> ❤️').pauseFor(1000).deleteAll()
-                      .typeString('<span style="text-shadow:2px 2px 3px purple">UI Developer</span> 😁').pauseFor(1000).deleteAll().start()
+                    typewriter
+                      .typeString('<span style="text-shadow:2px 2px 3px purple">Frontend Developer</span> 💻')
+                      .pauseFor(1000)
+                      .deleteAll()
+                      .start()
                   }}
                 />}
               </Text>
@@ -87,15 +79,10 @@ const Home = () => {
 
           <Stack
             h="100%"
-            w={{ base: "0%", sm: "0%", md: "45%", lg: "48%" }}
+            w={{ base: "0%", sm: "0%", md: "40%", lg: "40%" }}
             display={{ base: "none", sm: "none", md: "flex", lg: "flex" }}
           >
-            <Image
-              src={nahue}
-              h={"100%"}
-              w={{ base: "100%", sm: "100%", md: "100%", lg: "100%" }}
-              objectFit={"contain"}
-            />
+            <Ojos />
           </Stack>
 
         </Stack>

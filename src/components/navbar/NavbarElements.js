@@ -2,8 +2,11 @@ import styled from "@emotion/styled";
 
 export const Container = styled.div`
   width: 100%;
-  height: 120px;
-  background-color: #08080B;
+  height: 110px;
+  background: ${({ show }) => (show === false ? '#08080B' : '#111')};
+
+  transition-timing-function: ease-in;
+  transition: all .5s;
 `;
 
 export const Wrapper = styled.div`

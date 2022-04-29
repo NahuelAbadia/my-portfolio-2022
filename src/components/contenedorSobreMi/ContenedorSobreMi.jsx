@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Button, Icon, Stack, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import { FaLinkedin, FaInstagram, FaGithub, FaEnvelope } from 'react-icons/fa'
+import { FaLinkedin, FaGithub, FaEnvelope } from 'react-icons/fa'
 
 const ContenedorSobreMi = () => {
 
@@ -26,14 +26,13 @@ const ContenedorSobreMi = () => {
         {`<Sobre mi />`}
       </Text>
       <Stack
-        fontSize={{ base: "xl", sm: "2xl", md: "2xl", lg: "3xl" }}
+        fontSize={{ base: "xl", sm: "2xl", md: "2xl", lg: "1.7rem" }}
         fontWeight={{ base: "semibold", sm: "semibold", md: "semibold", lg: "semibold" }}
         textAlign={{ base: "center", sm: "center", md: "inherit", lg: "inherit" }}
         w={{ base: "92%", sm: "90%", md: "90%", lg: "100%" }}
         h="70%"
         py={{ base: 2, sm: 4, md: 8, lg: 12 }}
         spacing={12}
-
       >
         <Text>
           Soy un desarrollador frontend apasionado por lo que hago, con capacidad analítica y con una formación autodidacta.
@@ -80,7 +79,6 @@ const ContenedorSobreMi = () => {
           spacing={{ base: 4, sm: 4, md: 5, lg: 7 }}
           justifyContent={"flex-end"}
           pr={{ base: 2, sm: 4, md: 3, lg: 8 }}
-
         >
           <MotionBox
             as="a"
@@ -92,8 +90,7 @@ const ContenedorSobreMi = () => {
               as={FaLinkedin}
               w={{ base: 6, sm: 8, md: 9, lg: 9 }}
               h={{ base: 6, sm: 8, md: 9, lg: 9 }}
-            >
-            </Icon>
+            />
           </MotionBox>
           <MotionBox
             as="a"
@@ -105,8 +102,7 @@ const ContenedorSobreMi = () => {
               as={FaGithub}
               w={{ base: 6, sm: 8, md: 9, lg: 9 }}
               h={{ base: 6, sm: 8, md: 9, lg: 9 }}
-            >
-            </Icon>
+            />
           </MotionBox>
           <MotionBox
             as="a"
@@ -118,10 +114,9 @@ const ContenedorSobreMi = () => {
               as={FaEnvelope}
               w={{ base: 6, sm: 8, md: 9, lg: 9 }}
               h={{ base: 6, sm: 8, md: 9, lg: 9 }}
-            >
-            </Icon>
+            />
           </MotionBox>
-          <MotionBox
+          {/* <MotionBox
             as="a"
             href="https://www.instagram.com/nahue.abadia/"
             target="_blank"
@@ -133,7 +128,7 @@ const ContenedorSobreMi = () => {
               h={{ base: 6, sm: 8, md: 9, lg: 9 }}
             >
             </Icon>
-          </MotionBox>
+          </MotionBox> */}
         </Stack>
       </Stack>
 

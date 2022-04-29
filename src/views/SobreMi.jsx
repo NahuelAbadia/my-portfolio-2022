@@ -4,7 +4,7 @@ import ContenedorSobreMi from '../components/contenedorSobreMi/ContenedorSobreMi
 
 const SobreMi = () => {
   return (
-    <Box bgColor="negro.900">
+    <Box bgColor="negro.900" id="sobre-mi">
       <Container maxW="container.xl">
         <Stack align={"center"}>
           <ContenedorSobreMi />

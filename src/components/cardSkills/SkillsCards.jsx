@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Box, Grid, Icon, Stack, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
-const IconCards = ({ id, nombre, logo, color }) => {
+const IconCards = ({ nombre, logo, color }) => {
 
   const MotionBox = motion(Box)
 
@@ -16,7 +16,7 @@ const IconCards = ({ id, nombre, logo, color }) => {
       >
         <Grid
           templateColumns={{ sm: "repeat(1, 1fr)", lg: "repeat(1, 1fr)" }}
-          w={{ base: "60%", md: "100%", lg: "100%" }}
+          w={"100%"}
         >
           <MotionBox
             textColor="orange.500"
@@ -38,7 +38,14 @@ const IconCards = ({ id, nombre, logo, color }) => {
             </Icon>
           </MotionBox>
         </Grid>
-        <Text align="center" color="white" fontSize="xl" pt={3}>{nombre}</Text>
+        <Text
+          align="center"
+          color="white"
+          fontSize="xl"
+          pt={3}
+        >
+          {nombre}
+        </Text>
       </Stack>
     </Stack>
   )

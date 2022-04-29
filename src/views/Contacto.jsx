@@ -4,7 +4,7 @@ import FormularioContacto from '../components/formularioContacto/FormularioConta
 
 const Contacto = () => {
   return (
-    <Box bgColor="negro.900">
+    <Box bgColor="negro.900" id="contacto">
       <Container maxW="container.xl">
         <Stack w="100%" align={"center"}>
           <Stack>

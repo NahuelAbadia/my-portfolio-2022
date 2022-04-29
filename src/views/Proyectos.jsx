@@ -4,7 +4,7 @@ import InfoProyectos from '../components/infoProyectos/InfoProyectos.jsx';
 
 const Proyectos = () => {
   return (
-    <Box bgColor="negro.900">
+    <Box bgColor="negro.900" id="proyectos">
       <Container maxW="container.xl">
         <Stack
           py={10}
@@ -14,6 +14,7 @@ const Proyectos = () => {
             fontSize="5xl"
             fontWeight="bold"
             color="blanco"
+            pt={6}
           >
             <Text
               align="center"
