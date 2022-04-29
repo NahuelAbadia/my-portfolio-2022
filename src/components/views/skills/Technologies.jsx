@@ -1,7 +1,7 @@
 import React from 'react';
 import IconCards from './IconCards';
 import { Grid, GridItem, Stack } from "@chakra-ui/react";
-import { skills } from "../../../api/SkillsData"
+import { skills } from "../../../api/SkillsData.js"
 
 const Technologies = () => {
   return (
