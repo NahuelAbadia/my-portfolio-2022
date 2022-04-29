@@ -10,8 +10,8 @@ import {
 } from "./NavbarElements"
 import { FaBars, FaTimes, } from "react-icons/fa";
 import { IconContext } from "react-icons";
-import { motion } from "framer-motion";
 import { Stack, Text } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { Link } from "react-scroll"
 
 const Navbar = () => {
@@ -127,7 +127,7 @@ const Navbar = () => {
                   <Link
                     to="contacto"
                     spy={true}
-                    offset={0}
+                    offset={-110}
                     duration={700}
                   >
                     <MotionText

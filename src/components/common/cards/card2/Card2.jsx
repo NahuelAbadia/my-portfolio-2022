@@ -1,6 +1,6 @@
 import React from 'react'
-import { Box, Button, Image, Stack, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
+import { Box, Button, Image, Stack, Text } from '@chakra-ui/react'
 
 const CardProyectos = ({ nombre, tecnologia, desc, img, pagina, repo }) => {
 

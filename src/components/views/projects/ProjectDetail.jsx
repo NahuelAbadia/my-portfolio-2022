@@ -1,14 +1,11 @@
 import React from 'react'
-import NewCard from '../common/cards/card1/NewCard'
+import Card from '../../common/cards/card1/Card'
 import { Grid, Stack, } from '@chakra-ui/react'
-import { proyectos } from '../../api/ProyectosData'
+import { proyectos } from '../../../api/ProyectosData'
 
-const InfoProyectos = () => {
+const ProjectDetail = () => {
   return (
-    <Stack direction={"column"} >
-      <Stack
-        py={12}
-      >
+      <Stack>
         <Grid
           templateColumns={{ base: "repeat(1, 1fr)", sm: "repeat(1, 1fr)", md: "repeat(1, 1fr)", lg: "repeat(2, 1fr)" }}
           gap={{ base: 7, md: 4, lg: 10 }}
@@ -19,7 +16,7 @@ const InfoProyectos = () => {
           margin="auto"
         >
           {proyectos.map((proyecto) => {
-            return <NewCard
+            return <Card
               key={proyecto.id}
               nombre={proyecto.nombre}
               tecnologia={proyecto.tecnologia}
@@ -31,8 +28,7 @@ const InfoProyectos = () => {
           })}
         </Grid>
       </Stack>
-    </Stack>
   )
 }
 
-export default InfoProyectos
+export default ProjectDetail

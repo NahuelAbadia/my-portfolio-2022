@@ -1,8 +1,8 @@
 import React from 'react'
-import { Box, Button, FormControl, FormLabel, Grid, Input, InputGroup, Stack, Textarea, } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
+import { Box, Button, FormControl, FormLabel, Grid, Input, InputGroup, Stack, Textarea, } from '@chakra-ui/react';
 
-const FormularioContacto = () => {
+const ContactForm = () => {
 
   const MotionButton = motion(Button)
 
@@ -133,4 +133,4 @@ const FormularioContacto = () => {
   )
 }
 
-export default FormularioContacto
+export default ContactForm

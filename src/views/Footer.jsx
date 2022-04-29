@@ -8,11 +8,16 @@ const Footer = () => {
         align="center"
         bgColor="negro.0"
         justify="center"
-        // direction={{ base: "column", lg: "row" }}
         direction="row"
         minH="6vh"
       >
-        <Text fontWeight={"bold"} color="blanco" textAlign={"center"}>Copyright © 2022 - Nahuel Abadia. Todos los derechos reservados</Text>
+        <Text
+          color="blanco"
+          fontWeight={"bold"}
+          textAlign={"center"}
+        >
+          Copyright © 2022 - Nahuel Abadia. Todos los derechos reservados
+        </Text>
       </Stack>
     </Box>
   );

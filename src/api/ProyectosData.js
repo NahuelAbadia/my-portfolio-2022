@@ -35,22 +35,4 @@ export const proyectos = [
     pagina: "https://food-app-nabadia.vercel.app",
     repo: "https://github.com/NahuelAbadia/food-app",
   },
-  // {
-  //   id: 3,
-  //   nombre: "Cotizador de Criptomonedas",
-  //   tecnologia: "JavaScript, React, Styled Components, Axios",
-  //   desc: "Cotizador de criptomedas en tiempo real a traves de una API",
-  //   img: "https://d33wubrfki0l68.cloudfront.net/61e717299307ef162d0aaa7b/screenshot_2022-01-18-19-38-22-0000.png",
-  //   pagina: "https://cotizador-cripto-nabadia.netlify.app",
-  //   repo: "https://github.com/NahuelAbadia/criptomonedas",
-  // },
-  // {
-  //   id: 4,
-  //   nombre: "Registro de turnos - Veterinaria",
-  //   tecnologia: "JavaScript, React, CSS, Skeleton",
-  //   desc: "CRUD para turnos de mascotas en una veterinaria",
-  //   img: "https://d33wubrfki0l68.cloudfront.net/614a09c7831e9600b82d90f1/screenshot_2021-09-21-16-35-21-0000.png",
-  //   pagina: "https://citas-app-nabadia.netlify.app",
-  //   repo: "https://github.com/NahuelAbadia/citas",
-  // },
 ]

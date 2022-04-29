@@ -1,8 +1,8 @@
 import React from 'react'
 import Button2 from '../../buttons/button2/Button2'
-import "./NewCard.css"
+import "./Card.css"
 
-const NewCard = ({ nombre, desc, tecnologia, repo, pagina, img, }) => {
+const Card = ({ nombre, desc, tecnologia, repo, pagina, img, }) => {
   return (
       <div className="card">
         <div className="card-image">
@@ -21,4 +21,4 @@ const NewCard = ({ nombre, desc, tecnologia, repo, pagina, img, }) => {
   )
 }
 
-export default NewCard
+export default Card

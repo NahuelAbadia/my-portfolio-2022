@@ -61,7 +61,7 @@ export const Menu = styled.ul`
     top: 100px;
     left: ${({ open }) => (open ? "0" : "-100%")}; //Import
     width: 100%;
-    height: 85vh;
+    height: 90vh;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;
@@ -74,7 +74,7 @@ export const Menu = styled.ul`
     top: 100px;
     left: ${({ open }) => (open ? "0" : "-100%")}; //Import
     width: 100%;
-    height: 75vh;
+    height: 90vh;
     justify-content: space-evenly;
     flex-direction: column;
     align-items: center;

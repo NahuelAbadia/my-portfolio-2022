@@ -1,5 +1,5 @@
 import { FaHtml5, FaCss3Alt, FaGithub, FaGitAlt, FaReact, } from 'react-icons/fa'
-import { SiJavascript, SiBootstrap, SiChakraui, SiStyledcomponents, SiFramer, SiRedux, SiTypescript, SiNextdotjs } from 'react-icons/si'
+import { SiJavascript, SiBootstrap, SiChakraui, SiFramer, SiRedux, SiTypescript, SiNextdotjs } from 'react-icons/si'
 
 export const skills = [{
     id: 1,
@@ -55,12 +55,6 @@ export const skills = [{
     color: "#44C7C0",
     logo: SiChakraui,
 },
-// {
-//     id: 12,
-//     nombre: "Styled Components",
-//     color: "pink.300",
-//     logo: SiStyledcomponents,
-// },
 {
     id: 9,
     nombre: "Framer Motion",

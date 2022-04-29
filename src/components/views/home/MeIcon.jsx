@@ -1,6 +1,6 @@
 import React from 'react'
-import nahue from "../assets/nahu.png"
-import { Image } from '@chakra-ui/react'
+import nahue from "../../../assets/nahu.png"
+import { Image, Stack } from '@chakra-ui/react'
 import "./MeIcon.css"
 
 const MeIcon = () => {
@@ -21,19 +21,15 @@ const MeIcon = () => {
   }
 
   return (
-    <>
+    <Stack
+      h="100%"
+      w={{ base: "0%", sm: "0%", md: "40%", lg: "40%" }}
+      display={{ base: "none", sm: "none", md: "flex", lg: "flex" }}
+    >
       <div className="face">
         <Image
           src={nahue}
-          width={{ md:"430px",lg:"430px"}}
-          // bg="green"
-          // position={"relative"}
-        
-          // w={"86%"}
-        // top="230px"
-
-        // top={{ lg: "15%" }}
-        // right={{ md: "15px", lg: "19.15%" }}
+          width={{ md: "430px", lg: "430px" }}
         />
       </div>
       <div className="eyes">
@@ -45,7 +41,7 @@ const MeIcon = () => {
           <div className="ball"></div>
         </div>
       </div>
-    </>
+    </Stack>
   )
 }
 
