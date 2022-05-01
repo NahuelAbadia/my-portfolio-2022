@@ -80,9 +80,9 @@ const NavbarMobile = () => {
             <DrawerBody>
               <Stack
                 h={'100%'}
-                pt={{ base: 12, sm: 16, md: 20 }}
+                pt={{ base: 16, sm: 16, md: 20 }}
                 direction={'column'}
-                spacing={{ base: 24, sm: 24, md: 16 }}
+                spacing={{ base: 16, sm: 24, md: 16 }}
               >
                 <Link
                   to="home"
