@@ -1,9 +1,13 @@
 import React from 'react'
 import nahue from "../../../assets/nahu.png"
 import { Image, Stack } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 import "./MeIcon.css"
 
 const MeIcon = () => {
+
+  const MotionStack = motion(Stack)
+
   var balls = document.getElementsByClassName("ball");
   document.onmousemove = function (event) {
     var x = event.clientX * 65 / window.innerWidth + "%";
@@ -21,7 +25,7 @@ const MeIcon = () => {
   }
 
   return (
-    <Stack
+    <MotionStack
       h="100%"
       w={{ base: "0%", sm: "0%", md: "40%", lg: "40%" }}
       display={{ base: "none", sm: "none", md: "flex", lg: "flex" }}
@@ -41,7 +45,7 @@ const MeIcon = () => {
           <div className="ball"></div>
         </div>
       </div>
-    </Stack>
+    </MotionStack>
   )
 }
 

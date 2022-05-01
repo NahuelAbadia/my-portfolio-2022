@@ -1,24 +1,10 @@
-import React, { useEffect, useState } from "react";
-import {
-  Container,
-  LogoContainer,
-  Wrapper,
-  Menu,
-  MenuItem,
-  MenuItemLink,
-  MobileIcon,
-} from "./NavbarElements"
-import { FaBars, FaTimes, } from "react-icons/fa";
-import { IconContext } from "react-icons";
-import { Stack, Text } from "@chakra-ui/react";
-import { motion } from "framer-motion";
-import { Link } from "react-scroll"
+import React, { useEffect, useState } from 'react'
+import NavbarMobile from './NavbarMobile';
+import NavbarDesktop from './NavbarDesktop';
+import { Stack } from '@chakra-ui/react'
 
 const Navbar = () => {
 
-  const MotionText = motion(Text)
-
-  const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [show, handleShow] = useState(false)
 
   useEffect(() => {
@@ -35,116 +21,31 @@ const Navbar = () => {
   }, [])
 
   return (
-    <Stack w={"100%"} zIndex={100} as="header" position="fixed">
-      <Container show={show}>
-        <Wrapper>
-          <IconContext.Provider value={{ style: { fontSize: "2em" } }}>
-            <LogoContainer>
-              <Link
-                to="home"
-                spy={true}
-                offset={0}
-                duration={700}
-              >
-                <MotionText
-                  color="white"
-                  cursor="pointer"
-                  fontWeight="bold"
-                  fontSize={{ base: "27px", sm: "30px", md: "38px", lg: "5xl" }}
-                  whileHover={{
-                    rotate: -3,
-                    scale: 1.15
-                  }}
-                  _hover={{
-                    textColor: "violeta.100",
-                    transition: "0.2s",
-                  }}
-                  style={{ textDecoration: 'none', transition: "0.2s" }}
-                >
-                  {`<My Portfolio />`}
-                </MotionText>
-              </Link>
-            </LogoContainer>
+    <Stack
+      w="100%"
+      h="110px"
+      as="header"
+      position="fixed"
+      zIndex={100}
+      color="white"
+      alignItems="center"
+      justifyContent="center"
+      bg={!show ? "#08080B" : "#111"}
+      transition="0.6s"
+      fontFamily="ProximaNova_bold, sans-serif"
+    >
+      <Stack
+        w="100%"
+        maxW="1300px"
+        direction="row"
+        alignItems="center"
+        justifyContent="space-between"
+      >
+        <NavbarDesktop />
+        <NavbarMobile />
+      </Stack>
+    </Stack >
+  )
+}
 
-            <MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}>
-              {showMobileMenu ? <FaTimes /> : <FaBars />}
-            </MobileIcon>
-
-            <Menu open={showMobileMenu}>
-              <MenuItem>
-                <Link
-                  to="sobre-mi"
-                  spy={true}
-                  offset={-80}
-                  duration={700}
-                >
-                  <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                    <MotionText
-                      _hover={{ textColor: "violeta.100", fontSize: { base: "2.1rem", sm: "2.5rem", md: "2.9rem", lg: "1.43rem" }, transition: "0.2s" }}
-                      style={{ textDecoration: 'none', transition: "0.2s", }}
-                    >
-                      Sobre mi
-                    </MotionText>
-                  </MenuItemLink>
-                </Link>
-              </MenuItem>
-              <MenuItem>
-                <Link
-                  to="skills"
-                  spy={true}
-                  offset={-80}
-                  duration={700}
-                >
-                  <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                    <MotionText
-                      _hover={{ textColor: "violeta.100", fontSize: { base: "2.1rem", sm: "2.5rem", md: "2.9rem", lg: "1.43rem" }, transition: "0.2s" }}
-                      style={{ textDecoration: 'none', transition: "0.2s" }}
-                    >
-                      Skills
-                    </MotionText>
-                  </MenuItemLink>
-                </Link>
-              </MenuItem>
-              <MenuItem>
-                <Link
-                  to="proyectos"
-                  spy={true}
-                  offset={-80}
-                  duration={700}
-                >
-                  <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                    <MotionText
-                      _hover={{ textColor: "violeta.100", fontSize: { base: "2.1rem", sm: "2.5rem", md: "2.9rem", lg: "1.43rem" }, transition: "0.2s" }}
-                      style={{ textDecoration: 'none', transition: "0.2s" }}
-                    >
-                      Proyectos
-                    </MotionText>
-                  </MenuItemLink>
-                </Link>
-              </MenuItem>
-              <MenuItem>
-                <Link
-                  to="contacto"
-                  spy={true}
-                  offset={-110}
-                  duration={700}
-                >
-                  <MenuItemLink onClick={() => setShowMobileMenu(!showMobileMenu)}>
-                    <MotionText
-                      _hover={{ textColor: "violeta.100", fontSize: { base: "2.1rem", sm: "2.5rem", md: "2.9rem", lg: "1.43rem" }, transition: "0.2s" }}
-                      style={{ textDecoration: 'none', transition: "0.2s" }}
-                    >
-                      Contacto
-                    </MotionText>
-                  </MenuItemLink>
-                </Link>
-              </MenuItem>
-            </Menu>
-          </IconContext.Provider>
-        </Wrapper>
-      </Container>
-    </Stack>
-  );
-};
-
-export default Navbar;
+export default Navbar

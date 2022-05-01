@@ -44,6 +44,7 @@ const Technologies = () => {
                 nombre={skill.nombre}
                 logo={skill.logo}
                 color={skill.color}
+                link={skill.link}
               />
             </GridItem>
           })}

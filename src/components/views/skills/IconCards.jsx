@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Box, Grid, Icon, Stack, Text } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
 
-const IconCards = ({ nombre, logo, color }) => {
+const IconCards = ({ nombre, logo, color, link }) => {
 
   const MotionBox = motion(Box)
 
@@ -29,13 +29,14 @@ const IconCards = ({ nombre, logo, color }) => {
             }}
             onMouseEnter={() => setisAnimating(!isAnimating)}
           >
-            <Icon
-              as={logo}
-              color={color}
-              h={{ base: 16, sm: 20, md: 24, lg: 24 }}
-              w={{ base: 16, sm: 20, md: 24, lg: 24 }}
-            >
-            </Icon>
+            <a href={link} target="_blank" rel="noreferrer">
+              <Icon
+                as={logo}
+                color={color}
+                h={{ base: 16, sm: 20, md: 24, lg: 24 }}
+                w={{ base: 16, sm: 20, md: 24, lg: 24 }}
+              />
+            </a>
           </MotionBox>
         </Grid>
         <Text
