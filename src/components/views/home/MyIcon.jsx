@@ -25,17 +25,25 @@ const MyIcon = () => {
   }
 
   const [isAnimating, setIsAnimating] = useState(false)
+  const [contador, setContador] = useState(1)
+
+  const animacion = () => {
+    setContador(contador + 1)
+    setIsAnimating(!isAnimating)
+  }
 
   return (
     <>
       <motion.div
         className="box-container"
-        animate={{ opacity: [0, 1, 1, 1, 1, 0] }}
-        transition={isAnimating ? { delay: 0, duration: 8 } : { delay: 4.25, duration: 8 }}
+        animate={{ opacity: contador > 1 ? 1 : [0, 1, 1, 1, 1, 0] }}
+        transition={{ delay: contador > 1 ? 0 : 4.25, duration: contador > 1 ? 2 : 8 }}
       >
-        <motion.h2 className="texto">
-          {isAnimating ? "¿Ya viste algunos de mis proyectos?😎" : "Hola! Bienvenido a mi portfolio😁"}
-        </motion.h2>
+        {isAnimating ?
+          <motion.h2 className="texto">¿Ya viste algunos de mis proyectos?😎</motion.h2>
+          :
+          <motion.h2 className="texto">Hola! Bienvenido a mi portfolio😁</motion.h2>
+        }
       </motion.div>
       <MotionStack
         h="100%"
@@ -53,14 +61,14 @@ const MyIcon = () => {
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={isAnimating ? { delay: 0, duration: 0 } : { delay: 3.2, duration: 0.5 }}
+        transition={isAnimating ? { delay: 0, duration: 0 } : { delay: contador > 1 ? 0 : 3.2, duration: contador > 1 ? 0 : 0.5 }}
       >
         <div className="face">
           <Image
             src={nahue}
             width={{ md: "430px", lg: "430px" }}
             cursor="pointer"
-            onClick={() => { setIsAnimating(true) }}
+            onClick={animacion}
           />
         </div>
         <div className="eyes">

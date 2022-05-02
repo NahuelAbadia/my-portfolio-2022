@@ -17,10 +17,6 @@ const Home = () => {
       justifyContent={"space-between"}
       direction={"row"}
       spacing={0}
-      initial={{
-        y: 0,
-        x: 0,
-      }}
     >
       <Name />
       <MyIcon />
