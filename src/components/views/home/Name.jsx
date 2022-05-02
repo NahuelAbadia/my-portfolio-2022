@@ -32,7 +32,7 @@ const Name = () => {
           lg: "38px"
         }}
         initial={{
-          y: 1200,
+          y: "100vh",
           opacity: 0
         }}
         animate={{
@@ -57,7 +57,7 @@ const Name = () => {
           lg: "65px"
         }}
         initial={{
-          y: 1200,
+          y: "100vh",
           opacity: 0
         }}
         animate={{
@@ -83,7 +83,7 @@ const Name = () => {
             lg: "38px"
           }}
           initial={{
-            y: 1200,
+            y: "100vh",
             opacity: 0
           }}
           animate={{
@@ -102,7 +102,7 @@ const Name = () => {
           color="violeta.100"
           fontSize={{ base: "26px", sm: "33px", md: "28px", lg: "38px" }}
           initial={{
-            y: 1600,
+            y: "100vh",
             opacity: 0
           }}
           animate={{
